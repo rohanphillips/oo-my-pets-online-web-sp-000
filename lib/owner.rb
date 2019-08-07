@@ -9,8 +9,11 @@ class Owner
     @@owners << self
   end
 
-  def sell_pets
+  def list_pets
+    "I have #{self.dogs.count} dog(s), and #{self.cats.count} cat(s)."
+  end
 
+  def sell_pets
     to_sell = Cat.all.select{|n| n.mood == "happy"}
     to_sell.concat(Dog.all.select{|n| n.mood == "happy"})
     to_sell.each do |n|
