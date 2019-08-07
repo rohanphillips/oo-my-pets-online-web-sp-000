@@ -12,6 +12,7 @@ class Owner
   def sell_pets
 
     to_sell = Cat.all.select{|n| n.mood == "happy"}
+    binding.pry
     to_sell + Dog.all.select{|n| n.mood == "happy"}
     binding.pry
     to_sell.each do |n|
