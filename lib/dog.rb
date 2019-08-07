@@ -1,5 +1,5 @@
 class Dog
-  attr_writer :name
+  attr_reader :name
   attr_accessor :owner
   @@dogs = []
   def initialize(name, owner)
