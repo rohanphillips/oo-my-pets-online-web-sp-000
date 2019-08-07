@@ -15,6 +15,12 @@ class Owner
     newdog = Dog.new(name, self)
   end
 
+  def walk_dogs
+    dogs.each do |dog|
+      dog.mood = "happy"
+    end
+  end
+
   def cats
     Cat.all.select{|n| n.owner == self}
   end
