@@ -14,6 +14,7 @@ class Owner
     to_sell << Cat.all.select{|n| n.mood == "happy"}
     to_sell << Dog.all.select{|n| n.mood == "happy"}
     to_sell.each do |n|
+      binding.pry 
       n.mood = "nervous"
     end
     to_sell
