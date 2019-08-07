@@ -11,6 +11,9 @@ class Owner
   def cats
     Cat.all.select{|n| n.owner == self}
   end
+  def dogs
+    Dog.all.select{|n| n.owner == self}
+  end
 
   def say_species
     "I am a human."
