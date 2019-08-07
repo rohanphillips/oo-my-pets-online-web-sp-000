@@ -9,4 +9,8 @@ class Cat
     @mood = "nervous"
     @@cats << self
   end
+
+  def self.all
+    @@all
+  end
 end
