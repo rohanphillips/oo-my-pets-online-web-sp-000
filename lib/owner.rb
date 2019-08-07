@@ -9,7 +9,9 @@ class Owner
   end
 
   def sell_pets
-
+    nervous_cats = Cat.all.select{|n| n.mood == "nervous"}
+    nervous_dogs = Dog.all.select{|n| n.mood == "nervous"}
+    nervous_cats + nervous_dogs
   end
 
   def buy_cat(name)
