@@ -9,7 +9,7 @@ class Owner
   end
 
   def cats
-    Cats.all.select{|n| n.owner == self}
+    Cat.all.select{|n| n.owner == self}
   end
 
   def say_species
