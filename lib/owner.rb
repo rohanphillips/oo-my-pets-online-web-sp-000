@@ -1,3 +1,4 @@
+require "pry"
 class Owner
 
   attr_reader  :name, :species
@@ -12,6 +13,7 @@ class Owner
     nervous_cats = Cat.all.select{|n| n.mood == "nervous"}
     nervous_dogs = Dog.all.select{|n| n.mood == "nervous"}
     nervous_cats + nervous_dogs
+    binding.pry 
   end
 
   def buy_cat(name)
