@@ -15,6 +15,7 @@ class Owner
     to_sell.concat(Dog.all.select{|n| n.mood == "happy"})
     to_sell.each do |n|
       n.mood = "nervous"
+      n.owner = nil
     end
     to_sell
   end
