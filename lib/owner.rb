@@ -20,4 +20,8 @@ class Owner
     @@owners.size
   end
 
+  def self.reset_all
+    @@owners.clear
+  end
+
 end
