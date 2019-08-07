@@ -17,7 +17,7 @@ class Owner
     to_sell.each do |n|
       n.mood = "nervous"
     end
-    binding.pry 
+    binding.pry
     to_sell
   end
 
