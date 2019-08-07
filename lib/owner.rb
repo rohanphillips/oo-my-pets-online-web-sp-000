@@ -8,6 +8,10 @@ class Owner
     @@owners << self
   end
 
+  def cats
+    Cats.all.select{|n| n.owner == self}
+  end
+
   def say_species
     "I am a human."
   end
