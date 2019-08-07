@@ -8,6 +8,10 @@ class Owner
     @@owners << self
   end
 
+  def buy_cat(name)
+    newcat = Cat.new(name, self)
+  end
+
   def cats
     Cat.all.select{|n| n.owner == self}
   end
