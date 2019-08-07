@@ -10,8 +10,8 @@ class Owner
   end
 
   def sell_pets
-    nervous_cats = Cat.all.select{|n| n.mood == "nervous" && n.owner == self}
-    nervous_dogs = Dog.all.select{|n| n.mood == "nervous" && n.owner == self}
+    nervous_cats = Cat.all.select{|n| n.mood == "nervous" and n.owner == self}
+    nervous_dogs = Dog.all.select{|n| n.mood == "nervous" and n.owner == self}
     nervous_cats + nervous_dogs
     #binding.pry
   end
