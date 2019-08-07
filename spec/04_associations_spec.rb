@@ -111,7 +111,7 @@ describe "Associations" do
         [fido, tabby].each {|o| o.mood = "happy" }
 
         @owner.sell_pets
-        binding.pry
+      
         [fido, tabby].each { |o| expect(o.mood).to eq("nervous") }
       end
 
